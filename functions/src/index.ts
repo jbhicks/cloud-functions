@@ -8,7 +8,7 @@ const axios = require("axios");
 export const getSCStream = functions.https.onRequest((req: any, res: any) => {
   functions.logger.info("received request "+req);
   functions.logger.info("responding with "+getData());
-  req.send(getData());
+  res.send(getData());
 });
 
 async function getData() {
