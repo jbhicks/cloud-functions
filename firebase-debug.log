@@ -1,0 +1,125 @@
+[debug] [2022-11-18T21:27:07.554Z] ----------------------------------------------------------------------
+[debug] [2022-11-18T21:27:07.555Z] Command:       /home/josh/.nvm/versions/node/v18.0.0/bin/node /home/josh/.nvm/versions/node/v18.0.0/bin/firebase emulators:start
+[debug] [2022-11-18T21:27:07.556Z] CLI Version:   11.6.0
+[debug] [2022-11-18T21:27:07.556Z] Platform:      linux
+[debug] [2022-11-18T21:27:07.556Z] Node Version:  v18.0.0
+[debug] [2022-11-18T21:27:07.556Z] Time:          Fri Nov 18 2022 14:27:07 GMT-0700 (Mountain Standard Time)
+[debug] [2022-11-18T21:27:07.556Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-18T21:27:07.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-18T21:27:07.599Z] > authorizing via signed-in user (joshua.brock.hicks@gmail.com)
+[debug] [2022-11-18T21:27:07.635Z] openjdk version "17.0.4" 2022-07-19
+OpenJDK Runtime Environment (build 17.0.4+8-Ubuntu-120.04)
+OpenJDK 64-Bit Server VM (build 17.0.4+8-Ubuntu-120.04, mixed mode, sharing)
+
+[debug] [2022-11-18T21:27:07.637Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting"}}
+[debug] [2022-11-18T21:27:07.645Z] [hub] writing locator at /tmp/hub-my-web-site-27a15.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, database, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, database, pubsub, storage, eventarc\u001b[22m"}}
+[warn] ⚠  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2022-11-18T21:27:07.655Z] defaultcredentials: writing to file /home/josh/.config/firebase/joshua_brock.hicks_gmail.com_application_default_credentials.json
+[debug] [2022-11-18T21:27:07.656Z] Setting GAC to /home/josh/.config/firebase/joshua_brock.hicks_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/josh/.config/firebase/joshua_brock.hicks_gmail.com_application_default_credentials.json"}}
+[debug] [2022-11-18T21:27:07.657Z] > refreshing access token with scopes: []
+[debug] [2022-11-18T21:27:07.659Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-18T21:27:07.659Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-18T21:27:07.832Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-18T21:27:07.832Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-18T21:27:07.850Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-web-site-27a15/adminSdkConfig [none]
+[debug] [2022-11-18T21:27:08.113Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-web-site-27a15/adminSdkConfig 200
+[debug] [2022-11-18T21:27:08.113Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-web-site-27a15/adminSdkConfig {"projectId":"my-web-site-27a15","storageBucket":"my-web-site-27a15.appspot.com","locationId":"us-central"}
+[debug] [2022-11-18T21:27:08.129Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-11-18T21:27:08.129Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-11-18T21:27:08.129Z] Starting Firestore Emulator with command {"binary":"java","args":["-Djava.net.preferIPv4Stack=true","-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/home/josh/.cache/firebase/emulators/cloud-firestore-emulator-v1.14.4.jar","--host","127.0.0.1","--port",8080,"--rules","/home/josh/gcp-cloud-functions/firestore.rules","--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Djava.net.preferIPv4Stack=true\",\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/home/josh/.cache/firebase/emulators/cloud-firestore-emulator-v1.14.4.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--rules\",\"/home/josh/gcp-cloud-functions/firestore.rules\",\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2022-11-18T21:27:08.849Z] Nov 18, 2022 2:27:08 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:46205
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 18, 2022 2:27:08 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:46205\n"}}
+[debug] [2022-11-18T21:27:08.862Z] API endpoint: http://127.0.0.1:8080 {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://127.0.0.1:8080"}}
+[debug] [2022-11-18T21:27:08.863Z] 
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\n"}}
+[debug] [2022-11-18T21:27:08.890Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-web-site-27a15/sites 
+[debug] [2022-11-18T21:27:09.440Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-web-site-27a15/sites 200
+[debug] [2022-11-18T21:27:09.440Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-web-site-27a15/sites {"sites":[{"name":"projects/my-web-site-27a15/sites/my-web-site-27a15","defaultUrl":"https://my-web-site-27a15.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2022-11-18T21:27:09.440Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-web-site-27a15/webApps/-/config [none]
+[debug] [2022-11-18T21:27:09.800Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-web-site-27a15/webApps/-/config 200
+[debug] [2022-11-18T21:27:09.800Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-web-site-27a15/webApps/-/config {"projectId":"my-web-site-27a15","storageBucket":"my-web-site-27a15.appspot.com","locationId":"us-central","apiKey":"AIzaSyBRFQQlnhmQlGZUAAWtkWPN68UFS9Hptto","authDomain":"my-web-site-27a15.firebaseapp.com","messagingSenderId":"457664227137"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2022-11-18T21:27:09.818Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-11-18T21:27:09.818Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-11-18T21:27:09.818Z] Starting Emulator UI with command {"binary":"node","args":["/home/josh/.cache/firebase/emulators/ui-v1.9.0/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/home/josh/.cache/firebase/emulators/ui-v1.9.0/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-11-18T21:27:09.890Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[info] i  functions: Watching "/home/josh/gcp-cloud-functions/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/josh/gcp-cloud-functions/functions\" for Cloud Functions..."}}
+[debug] [2022-11-18T21:27:10.077Z] Validating nodejs source
+[debug] [2022-11-18T21:27:11.179Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-11-18T21:27:11.179Z] Building nodejs source
+[debug] [2022-11-18T21:27:11.179Z] Analyzing nodejs backend spec
+[debug] [2022-11-18T21:27:11.180Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-18T21:27:11.258Z] Serving at port 9007
+
+[debug] [2022-11-18T21:27:11.351Z] Got response from /__/functions.yaml {"endpoints":{"getSCStream":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"getSCStream"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-18T21:27:11.356Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: getSCStream. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getSCStream."}}
+[info] ✔  functions[us-central1-getSCStream]: http function initialized (http://127.0.0.1:5001/my-web-site-27a15/us-central1/getSCStream). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/my-web-site-27a15/us-central1/getSCStream)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Firestore │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5000 │ n/a                             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Eventarc  │ 127.0.0.1:9299 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
