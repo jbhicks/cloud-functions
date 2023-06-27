@@ -1,14 +1,13 @@
 import { HandleRequest, HttpRequest, HttpResponse } from "@fermyon/spin-sdk"
 
 const encoder = new TextEncoder()
+let router = utils.Router();
 
-export const handleRequest: HandleRequest = async function (request: HttpRequest): Promise<HttpResponse> {
-  let offset = 1;
-  let limit = 100;
+async function getScStream(offset: string, limit: string) {
   const client_id = spinSdk.config.get("sc_client_id");
   const sc_token = spinSdk.config.get("sc_token");
   const urlStr = `https://api-v2.soundcloud.com/stream?offset=${offset}&limit=${limit}&promoted_playlist=true&client_id=${client_id}&app_version=1686915292&app_locale=en`;
-
+  console.log(`url: ${urlStr}`);
   const stream = await fetch(urlStr, {
     method: "GET",
     headers: {
@@ -24,15 +23,22 @@ export const handleRequest: HandleRequest = async function (request: HttpRequest
       "Sec-Fetch-Dest": "empty",
       "Sec-Fetch-Mode": "cors",
       "Sec-Fetch-Site": "cross-site",
-
     },
   });
   const data: any = await stream.json();
-  console.log(`retrieved ${data.collection.length} tracks`);
+
+  return data;
+}
+
+export const handleRequest: HandleRequest = async function (request: HttpRequest): Promise<HttpResponse> {
+  const url = new URL(request.headers["spin-full-url"]);
+  const params = url.searchParams;
+  const offset = params.get("offset") ?? "0";
+  const limit = params.get("limit") ?? "100";
+  const data = await getScStream(offset, limit);
 
   return {
     status: 200,
-    headers: { "foo": "bar" },
     body: encoder.encode(JSON.stringify(data)).buffer
   }
 }
